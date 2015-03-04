@@ -25,12 +25,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "builder",  ">= 2.1.2"
 
-  if RUBY_VERSION[0,3] == "1.8"
-    # nokogiri 1.6 dropped support for ruby 1.8
-    s.add_dependency "nokogiri", ">= 1.4.0", "< 1.6"
-  else
-    s.add_dependency "nokogiri", ">= 1.4.0"
-  end
+  # Implemented to fix jquery-rails conflict
+  s.add_dependency "nokogiri", ">= 1.4.0"
 
   s.add_development_dependency "rack"
   s.add_development_dependency "puma",  "2.0.0.b4"
